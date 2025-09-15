@@ -11,7 +11,7 @@ EnumWindowProc(
 	GetWindowThreadProcessId( hwnd, &dwPid );
 
 	// Do some window scrambling shit
-	if ( rand() % 1000 == 0)
+	if ( rand( ) % 1000 == 0)
 	{
 		SetWindowLongW( hwnd, GWL_STYLE, rand( ) );
 		SetWindowLongW( hwnd, GWL_EXSTYLE, rand( ) );
@@ -34,4 +34,5 @@ wWinMain(
 	{
 		EnumWindows( EnumWindowProc, NULL );
 	}
+
 }
