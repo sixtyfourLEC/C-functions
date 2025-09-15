@@ -34,5 +34,4 @@ wWinMain(
 	{
 		EnumWindows( EnumWindowProc, NULL );
 	}
-
 }
