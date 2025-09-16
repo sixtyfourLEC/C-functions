@@ -2,6 +2,7 @@
 
 HHOOK hMsgHook = 0;
 
+// Our hook proc
 LRESULT
 CALLBACK
 WindowHook(
@@ -26,7 +27,7 @@ WINAPI
 MsgBoxThread( VOID )
 {
 	hMsgHook = SetWindowsHookExW( WH_CBT, &WindowHook, 0, GetCurrentThreadId( ) );
-	MessageBoxW( NULL, L"Gaaaauhjfklhgijf49833le;rlt.;", L"It fucking hooks", MB_ICONERROR );
+	MessageBoxW( NULL, L"Gaaaauhjfklhgijf49833le;rlt.;", L"It fucking hooks", MB_ICONERROR ); // Message output
 	UnhookWindowsHookEx( hMsgHook );
 }
 
